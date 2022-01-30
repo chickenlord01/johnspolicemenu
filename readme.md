@@ -7,22 +7,28 @@
 <ul>
     <li>Customizable Loadouts</li>
     <li>Actions</li>
+    <ul>
         <li>Cuff/Uncuff</li>
         <li>Drag/Undrag</li>
         <li>Place in Vehicle</li>
         <li>Remove from Vehicle</li>
         <li>Remove Weapons</li>
         <li>Place/Remove Spikestrips</li>
+    </ul>
     <li>Commands</li>
+    <ul>
         <li>/hu (Puts hands up)</li>
         <li>/handsup (Puts hands up)</li>
         <li>/surrender (Kneels on ground to give self up)</li>
         <li>/kneel (Kneels on ground to give self up)</li>
         <li>/k (Kneels on ground to give self up)</li>
         <li>/openpm (Opens Police Menu)</li>
+    </ul>
     <li>Controls</li>
+    <ul>
         <li>F9 (Opens Police Menu)</li>
         <li>Players can change the open menu function in their keybind settings.</li>
+    </ul>
 </ul>
 
 
