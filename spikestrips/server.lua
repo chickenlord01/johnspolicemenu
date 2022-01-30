@@ -1,0 +1,5 @@
+RegisterServerEvent('police:spikes')
+AddEventHandler('police:spikes', function(currentVeh, peeps)
+        TriggerClientEvent("police:dietyres", peeps, currentVeh)
+        TriggerClientEvent("police:dietyres2", peeps)
+end)
