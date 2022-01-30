@@ -1,5 +1,13 @@
 Config = {}
 
+Config.Actions = {
+	cuffing = true,
+	dragging = true,
+	removefromvehicle = true,
+	removeweapons = true,
+	spikes = true
+}
+
 Config.Loadouts = {
 	["sheriff"] = {
 		name = "Sheriff Loadout",

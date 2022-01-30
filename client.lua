@@ -1,5 +1,5 @@
 --DONT CHANGE THESE UNLESS YOU KNOW WHAT YOU ARE DOING
-local menu, player, loadouts, access = nil, nil, Config.Loadouts, false
+local menu, player, loadouts, access, actions = nil, nil, Config.Loadouts, false, Config.Actions
 local cuffed, dragged, isdragging, plhplayer = false, false, false, 0
 
 --Thread(s) to manage menu and handle permission setting upon script start. Also handles player actions.
@@ -306,19 +306,33 @@ function UnseatVehicle()
 end
 
 function HandleActions()
-    if WarMenu.Button('Cuff Suspect') then
-        ToggleCuffs()
-    elseif WarMenu.Button('Drag Suspect') then
-        ToggleDrag()
-    elseif WarMenu.Button('Place in Vehicle') then
-        PutInVehicle()
-    elseif WarMenu.Button('Remove From Vehicle') then
-        UnseatVehicle()
-    elseif WarMenu.Button('Remove Weapons') then
-        RemoveWeapons()
-    elseif WarMenu.Button('Drop Spike') then
-        ToggleSpikes()
-    end
+	if actions.cuffing then
+    	if WarMenu.Button('Cuff Suspect') then
+    	    ToggleCuffs()
+		end
+	end
+	if actions.dragging then
+    	if WarMenu.Button('Drag Suspect') then
+    	    ToggleDrag()
+		end
+	end
+	if actions.removefromvehicle then
+    	if WarMenu.Button('Place in Vehicle') then
+    	    PutInVehicle()
+		elseif WarMenu.Button('Remove From Vehicle') then
+			UnseatVehicle()
+		end
+	end
+	if actions.removeweapons then
+    	if WarMenu.Button('Remove Weapons') then
+    	    RemoveWeapons()
+		end
+	end
+	if actions.spikes then
+    	if WarMenu.Button('Drop Spike') then
+    	    ToggleSpikes()
+    	end
+	end
 end
 
 
