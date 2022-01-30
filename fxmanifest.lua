@@ -2,9 +2,9 @@ fx_version 'cerulean'
 game 'gta5'
 
 name 'johnspolicemenu'
-description ''
-version '0.0.1'
-url ''
+description 'Police Menu for Menu servers'
+version '1.0.0'
+url 'https://github.com/chickenlord01/johnspolicemenu'
 author 'JohnL#6869'
 
 shared_scripts {
