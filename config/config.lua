@@ -15,14 +15,11 @@ Config.Loadouts = {
 				WEAPON_FLARE
 			},
 			attachments = {
-				[1] = {
-					WEAPON_COMBATPISTOL.flashlight,
-					WEAPON_PUMPSHOTGUN.flashlight,
-					WEAPON_CARBINERIFLE.flashlight,
-					WEAPON_CARBINERIFLE.sight,
-					WEAPON_CARBINERIFLE.grip,
-				},
-				[2] = {}
+				WEAPON_COMBATPISTOL.flashlight,
+				WEAPON_PUMPSHOTGUN.flashlight,
+				WEAPON_CARBINERIFLE.flashlight,
+				WEAPON_CARBINERIFLE.sight,
+				WEAPON_CARBINERIFLE.grip,
 			}
 		},
 		perms = {},
@@ -31,14 +28,13 @@ Config.Loadouts = {
 		name = "SRU Loadout",
 		access = false,
 		weapons = {
-			WEAPON_HEAVYPISTOL,
-			WEAPON_KNIFE
-		},
-		attachments = {
-			[1] = {
-				WEAPON_HEAVYPISTOL.flashlight
+			spawn = {
+				WEAPON_HEAVYPISTOL,
+				WEAPON_KNIFE
 			},
-			[2] = {}
+			attachments = {
+				WEAPON_HEAVYPISTOL.flashlight
+			}
 		},
 		perms = {
 			"steam:1100001155f7f59",    --John

@@ -96,14 +96,11 @@ function HandleWeapons(weapons)
     local spawn = weapons.spawn
     local attach = weapons.attachments
     if spawn then
-        for k,v in pairs(spawn) do
-            GiveWeaponToPed(player, GetHashKey(v.spawn), 9999, false, false)
-            for i=1, #attach do
-                local list = attach[i]
-                for _,value in pairs(list) do
-                    GiveWeaponComponentToPed(player, GetHashKey(v.spawn), GetHashKey(value))
-                end
-            end
+        for _,v in pairs(attach) do
+        	for _,value in pairs(spawn) do
+        	    GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
+            GiveWeaponComponentToPed(player, GetHashKey(value.spawn), GetHashKey(v))
+        	end
         end
     else
         print("No weapons to spawn")
