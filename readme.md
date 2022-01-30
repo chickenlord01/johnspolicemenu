@@ -25,6 +25,15 @@
         <li>Players can change the open menu function in their keybind settings.</li>
 </ul>
 
+
+<h4>Modifying Config</h4>
+<ul>
+If you would like to add more weapons, simply add the name to the weapons>spawn portion. You can find a full list of weapons in the weapons.lua file.
+If you would like to add more attachments, simply add the name of the weapon.attachment. For example: WEAPON_PISTOL.suppressor. You can find a full list of weapon attachments in the weapons.lua file.
+The permission system is very simple. Add anyone you would like to have access to the menu to the Config.Accesslist. You can also lock certain loadouts to players by adding them to the perms list. If you only want certain individuals to have access to a loadout be sure to change the access variable to false then add them to the perms list.
+I tried my best to make it very straight forward for people that are new to development or have no idea what they are looking at. If you have questions don't be afraid to reach out on discord!
+</ul>
+
 <h4>Installation</h4>
 
 <ol>
