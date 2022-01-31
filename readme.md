@@ -2,6 +2,14 @@
 
 <h4>Created by JohnL#6869 (Discord)</h4>
 
+<h4>Planned Features</h4>
+<ul>
+  - Add Config options to toggle commands
+  - Add KeyMapping options in Config for commands
+  - Can't think of anything else right now (WIP)
+</ul>
+
+
 <h4>Features</h4>
 
 <ul>
