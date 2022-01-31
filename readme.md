@@ -6,6 +6,10 @@
 <ul>
     <li>Config options to toggle commands</li>
     <li>Add KeyMapping options in Config for commands</li>
+    <li>Add cuffing sounds for when player is cuffed.</li>
+    <li>Add cuffing animations.</li>
+    <li>Add minigame to allow player a chance to break out of cuffs/drag.</li>
+    <li>Change the current permissions system to ace permissions</li>
     <li>Can't think of anything else right now (WIP)</li>
 </ul>
 
