@@ -337,12 +337,31 @@ function HandleActions()
 	end
 end
 
+function HandleActionCommands()
+	if Config.ActionCommands.cuffing then
+		RegisterCommand("cuff",ToggleCuffs,true)
+	end
+	if Config.ActionCommands.dragging then
+		RegisterCommand("drag",ToggleDrag,true)
+	end
+	if Config.ActionCommands.spikes then
+		RegisterCommand("spikes",ToggleSpikes,true)
+	end
+end
 
-RegisterCommand("hu", PlayerHandsup)
-RegisterCommand("handsup", PlayerHandsup)
-RegisterCommand("surrender", PlayerSurrender)
-RegisterCommand("kneel", PlayerSurrender)
-RegisterCommand("k", PlayerSurrender)
+function HandleCommands()
+	if Config.Commands.handsup or Config.Commands.kneel then
+		for _,v in pairs(Config.Commands.handsup) do
+			RegisterCommand(v, PlayerHandsup)
+		end
+		for _,v in pairs(Config.Commands.kneel) do
+			RegisterCommand(v, PlayerSurrender)
+		end
+	end
+end
+
+HandleCommands()
+HandleActionCommands()
 --End *Actions*
 
 

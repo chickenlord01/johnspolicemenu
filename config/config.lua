@@ -1,5 +1,6 @@
 Config = {}
 
+--Toggles actions true/false
 Config.Actions = {
 	cuffing = true,
 	dragging = true,
@@ -8,6 +9,27 @@ Config.Actions = {
 	spikes = true
 }
 
+--If any of these are toggled to true use ace permissions for the commands EX: add_ace identifier.steam:1100001155f7f59 command.cuff allow #John
+Config.ActionCommands = {
+	cuffing = true,  --Permission (command.cuff)
+	dragging = true, --Permission (command.drag)
+	spikes = true    --Permission (command.spikes)
+}
+
+--You can add more command strings to this. For example /hu is "hu" in the handsup list.
+Config.Commands = {
+	handsup = {
+		"hu",
+		"handsup",
+	},
+	kneel = {
+		"k",
+		"kneel",
+		"surrender",
+	}
+}
+
+--Configuration for loadouts
 Config.Loadouts = {
 	["sheriff"] = {
 		name = "Sheriff Loadout",
@@ -56,3 +78,17 @@ function ShowNotification( text )
     AddTextComponentString( text )
     DrawNotification( false, false )
 end
+
+
+
+--Turns commands off if actions are off (Delete this if you dont want the commands and actions to be linked)
+if not Config.Actions.cuffing then
+	Config.ActionCommands.cuffing = false
+end
+if not Config.Actions.dragging then
+	Config.ActionCommands.dragging = false
+end
+if not Config.Actions.spikes then
+	Config.ActionCommands.spikes = false
+end
+--End Delete
