@@ -4,9 +4,9 @@
 
 <h4>Planned Features</h4>
 <ul>
-  - Add Config options to toggle commands
-  - Add KeyMapping options in Config for commands
-  - Can't think of anything else right now (WIP)
+    <li>Config options to toggle commands</li>
+    <li>Add KeyMapping options in Config for commands</li>
+    <li>Can't think of anything else right now (WIP)</li>
 </ul>
 
 
