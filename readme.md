@@ -4,7 +4,6 @@
 
 <h4>Planned Features</h4>
 <ul>
-    <li>Config options to toggle commands</li>
     <li>Add KeyMapping options in Config for commands</li>
     <li>Add cuffing sounds for when player is cuffed.</li>
     <li>Add cuffing animations.</li>
