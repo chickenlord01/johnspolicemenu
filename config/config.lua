@@ -30,7 +30,6 @@ Config.Loadouts = {
 				WEAPON_CARBINERIFLE.grip,
 			}
 		},
-		perms = {},
 	},
 	["sru"] = {
 		name = "SRU Loadout",
@@ -44,15 +43,11 @@ Config.Loadouts = {
 				WEAPON_HEAVYPISTOL.flashlight
 			}
 		},
-		perms = {
-			"steam:1100001155f7f59",    --John
-		},
 	},
 }
 
-Config.Accesslist = {
-	"steam:1100001155f7f59",   --John
-}
+--Don't touch unless you know what you are doing.
+Config.AceAccessPerm = "policemenu.open"
 
 
 --Shows notification

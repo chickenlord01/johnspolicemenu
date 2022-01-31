@@ -70,6 +70,8 @@ RegisterCommand("openpm", function()
         if not WarMenu.IsAnyMenuOpened() then
             WarMenu.OpenMenu("policemenu")
         end
+	else
+		ShowNotification("Error: No permission")
     end
 end)
 --End *Menu creation and permissions*

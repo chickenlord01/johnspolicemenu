@@ -1,46 +1,29 @@
 --Handles all permissions
-function HandleLoadoutPerms(ident)
+function HandleLoadoutPerms(_source)
     local placeholderloadout = Config.Loadouts
     for i,v in pairs(placeholderloadout) do
         Wait(2)
         if v.access ~= true then
-            for k,value in ipairs(v.perms) do
-                if ident == value then
-                    placeholderloadout[i].access = true
-                end
+            if IsPlayerAceAllowed(_source, "policemenu."..i) then
+                placeholderloadout[i].access = true
             end
         end
     end
     return placeholderloadout
 end
 
-function Access(ident, source)
-	for i,player in ipairs(Config.Accesslist) do
-		if player == ident then
-			TriggerClientEvent("accessresponse", source, true)
-            local plh = HandleLoadoutPerms(ident)
-            TriggerClientEvent("setloadout", source, plh)
-            break
-		end
-	end
+function Access()
+    local _source = source
+    local allowed = IsPlayerAceAllowed(_source, Config.AceAccessPerm)
+	TriggerClientEvent("accessresponse", _source, allowed)
+    if allowed then
+        local plh = HandleLoadoutPerms(_source)
+        TriggerClientEvent("setloadout", _source, plh)
+    end
 end
 
 RegisterNetEvent("refreshscriptperms")
-AddEventHandler("refreshscriptperms", function()
-    local _source = source
-    local steam
-
-    for k,v in pairs(GetPlayerIdentifiers(_source)) do
-        if string.sub(v, 1, string.len("steam:")) == "steam:" then
-          steam = v
-          break
-        end
-    end
-
-    if steam then
-        Access(steam, _source)
-    end
-end)
+AddEventHandler("refreshscriptperms", Access)
 --End *Handles all permissions*
 
 
