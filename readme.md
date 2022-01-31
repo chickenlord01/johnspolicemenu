@@ -9,7 +9,6 @@
     <li>Add cuffing sounds for when player is cuffed.</li>
     <li>Add cuffing animations.</li>
     <li>Add minigame to allow player a chance to break out of cuffs/drag.</li>
-    <li>Change the current permissions system to ace permissions</li>
     <li>Can't think of anything else right now (WIP)</li>
 </ul>
 
@@ -44,11 +43,28 @@
 </ul>
 
 
+<h4>Changing permissions</h4>
+<ul>
+<li>If you would like to allow players to use the menu, it is as easy as adding `add_ace identifier.ADDIDENTIFIERHERE policemenu.open allow #PLAYERNAME`</li>
+<li>If you would like to allow players to use a loadout, it is as easy as adding `add_ace identifier.ADDIDENTIFIERHERE policemenu.LOADOUTNAME allow #PLAYERNAME`</li>
+server.cfg example
+```
+add_ace identifier.steam:1100001155f7f59 policemenu.open allow #John
+add_ace identifier.steam:1100001155f7f59 policemenu.sru allow #John
+```
+
+You can also allow groups of players:
+```
+add_ace group.leo policemenu.open allow
+add_ace group.sru policemenu.sru allow
+```
+</ul>
+
+
 <h4>Modifying Config</h4>
 <ul>
 <li>If you would like to add more weapons, simply add the name to the weapons>spawn portion. You can find a full list of weapons in the weapons.lua file.</li>
 <li>If you would like to add more attachments, simply add the name of the weapon.attachment. For example: WEAPON_PISTOL.suppressor. You can find a full list of weapon attachments in the weapons.lua file.</li>
-<li>The permission system is very simple. Add anyone you would like to have access to the menu to the Config.Accesslist. You can also lock certain loadouts to players by adding them to the perms list. If you only want certain individuals to have access to a loadout be sure to change the access variable to false then add them to the perms list.</li>
 <li>Note: I tried my best to make it very straight forward for people that are new to development or have no idea what they are looking at. If you have questions don't be afraid to reach out on discord!</li>
 </ul>
 
