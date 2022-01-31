@@ -47,7 +47,9 @@
 <ul>
 <li>If you would like to allow players to use the menu, it is as easy as adding `add_ace identifier.ADDIDENTIFIERHERE policemenu.open allow #PLAYERNAME`</li>
 <li>If you would like to allow players to use a loadout, it is as easy as adding `add_ace identifier.ADDIDENTIFIERHERE policemenu.LOADOUTNAME allow #PLAYERNAME`</li>
+
 server.cfg example
+
 ```
 add_ace identifier.steam:1100001155f7f59 policemenu.open allow #John
 add_ace identifier.steam:1100001155f7f59 policemenu.sru allow #John
