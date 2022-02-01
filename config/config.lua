@@ -71,6 +71,8 @@ Config.Loadouts = {
 --Don't touch unless you know what you are doing.
 Config.AceAccessPerm = "policemenu.open"
 
+--Sets key to open menu
+Config.MenuKey = "F9"
 
 --Shows notification
 function ShowNotification( text )

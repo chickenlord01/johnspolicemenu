@@ -366,4 +366,4 @@ HandleActionCommands()
 
 
 --Registers Keymapping to open Police Menu
-RegisterKeyMapping("openpm", "Open Police Menu", "keyboard", "F9")
+RegisterKeyMapping("openpm", "Open Police Menu", "keyboard", Config.Menukey)
