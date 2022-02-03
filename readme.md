@@ -4,7 +4,6 @@
 
 <h4>Planned Features</h4>
 <ul>
-    <li>Add KeyMapping options in Config for commands</li>
     <li>Add cuffing sounds for when player is cuffed.</li>
     <li>Add cuffing animations.</li>
     <li>Add minigame to allow player a chance to break out of cuffs/drag.</li>

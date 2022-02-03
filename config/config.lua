@@ -29,6 +29,13 @@ Config.Commands = {
 	}
 }
 
+--You add the command name in the [""] like shown below. Then you set it equal to whatever key you want to map it too. (whenever a player connects and press the key it is mapped too, they run the command assigned.)
+Config.KeyMapping = {
+	--Commented out because once the keymapping is set and a player joins, the only way to remove it is for the player to remove it themselves. (EX. Press F8 to open console and type "unbind keyboard THEKEY")
+	--["handsup"] = "H",
+	--["kneel"] = "G",
+}
+
 --Configuration for loadouts
 Config.Loadouts = {
 	["sheriff"] = {

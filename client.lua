@@ -360,8 +360,17 @@ function HandleCommands()
 	end
 end
 
+function HandleKeyMapping()
+	if Config.KeyMapping then
+		for i,v in pairs(Config.KeyMapping) do
+			RegisterKeyMapping(tostring(i), "Default keymap from johnspolicemenu", "keyboard", tostring(v))
+		end
+	end
+end
+
 HandleCommands()
 HandleActionCommands()
+HandleKeyMapping()
 --End *Actions*
 
 
