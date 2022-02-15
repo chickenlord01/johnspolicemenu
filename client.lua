@@ -194,41 +194,39 @@ function PlayerCancelEmote()
 end
 
 function HandleDrag()
-    Citizen.CreateThread(function()
-        while cuffed or dragged or isdragging do
-	    	Citizen.Wait(0)
+    while cuffed or dragged or isdragging do
+		Citizen.Wait(0)
 
-	    	if cuffed == true then
-	    		RequestAnimDict('mp_arresting')
-	    		while not HasAnimDictLoaded('mp_arresting') do
-                    Citizen.Wait(0)
-	    		end
+		if cuffed == true then
+			RequestAnimDict('mp_arresting')
+			while not HasAnimDictLoaded('mp_arresting') do
+                Citizen.Wait(0)
+			end
 
-	    		while IsPedBeingStunned(player, false) do
-	    			ClearPedTasksImmediately(player)
-	    		end
-	    		TaskPlayAnim(player, 'mp_arresting', 'idle', 8.0, -8, -1, 16, 0, 0, 0, 0)
-                DisableControls()
-	    	end
+			while IsPedBeingStunned(player, false) do
+				ClearPedTasksImmediately(player)
+			end
+			TaskPlayAnim(player, 'mp_arresting', 'idle', 8.0, -8, -1, 16, 0, 0, 0, 0)
+            DisableControls()
+		end
 
-	    	if IsPlayerDead(PlayerPedId()) then
-	    		cuffed = false
-	    		isdragging = false
-                dragged = false
-	    	end
+		if IsPlayerDead(PlayerPedId()) then
+			cuffed = false
+			isdragging = false
+            dragged = false
+		end
 
-	    	if isdragging then
-	    		local ped = GetPlayerPed(GetPlayerFromServerId(plhplayer))
-	    		AttachEntityToEntity(player, ped, 4103, 11816, 0.48, 0.00, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
-	    		dragged = true
-	    	else
-	    		if not IsPedInParachuteFreeFall(player) and dragged then
-	    			dragged = false
-	    			DetachEntity(player, true, false)
-	    		end
-	    	end
-	    end
-    end)
+		if isdragging then
+			local ped = GetPlayerPed(GetPlayerFromServerId(plhplayer))
+			AttachEntityToEntity(player, ped, 4103, 11816, 0.48, 0.00, 0.0, 0.0, 0.0, 0.0, false, false, false, false, 2, true)
+			dragged = true
+		else
+			if not IsPedInParachuteFreeFall(player) and dragged then
+				dragged = false
+				DetachEntity(player, true, false)
+			end
+		end
+	end
 end
 
 
