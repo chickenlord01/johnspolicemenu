@@ -97,13 +97,19 @@ function HandleWeapons(weapons)
     RemoveAllPedWeapons(player, true)
     local spawn = weapons.spawn
     local attach = weapons.attachments
-    if spawn then
-        for _,v in pairs(attach) do
-        	for _,value in pairs(spawn) do
-        	    GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
-            GiveWeaponComponentToPed(player, GetHashKey(value.spawn), GetHashKey(v))
-        	end
-        end
+	if spawn then
+		if attach[0] then
+        	for _,v in pairs(attach) do
+        		for _,value in pairs(spawn) do
+        		    GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
+        	    	GiveWeaponComponentToPed(player, GetHashKey(value.spawn), GetHashKey(v))
+        		end
+			end
+		else
+			for _,value in pairs(spawn) do
+				GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
+			end
+		end
     else
         print("No weapons to spawn")
     end
