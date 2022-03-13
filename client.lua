@@ -98,7 +98,7 @@ function HandleWeapons(weapons)
     local spawn = weapons.spawn
     local attach = weapons.attachments
 	if spawn then
-		if attach[0] then
+		if attach[1] then
         	for _,v in pairs(attach) do
         		for _,value in pairs(spawn) do
         		    GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
