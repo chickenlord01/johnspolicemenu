@@ -2,7 +2,7 @@
 function HandleLoadoutPerms(_source)
     local placeholderloadout = Config.Loadouts
     for i,v in pairs(placeholderloadout) do
-        Wait(2)
+        Wait(200)
         if v.access ~= true then
             if IsPlayerAceAllowed(_source, "policemenu."..i) then
                 placeholderloadout[i].access = true
