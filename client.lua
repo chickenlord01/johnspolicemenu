@@ -103,6 +103,9 @@ function HandleWeapons(weapons)
         		for _,value in pairs(spawn) do
         		    GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
         	    	GiveWeaponComponentToPed(player, GetHashKey(value.spawn), GetHashKey(v))
+					if string.find(v,"CLIP")then
+						GiveWeaponToPed(player, GetHashKey(value.spawn), 9999, false, false)
+					end
         		end
 			end
 		else
